@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #0095dd;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  border: none;
+  outline: 0;
+}
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background: #222;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+.rules-btn {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  transition: all 0.5s;
+}
+
+.rules {
+  padding: 2rem 2rem;
+  max-width: 40rem;
+  background-color: #333;
+  color: #fff;
+  transform: translateX(-40rem);
+  transition: all 0.5s;
+  position: absolute;
+  height: 100%;
+}
+.show {
+  transform: translateX(0);
+}
+.rules.show + .rules-btn {
+  opacity: 0;
+  visibility: 0;
+}
+.rules > * {
+  margin-top: 2rem;
+}
+h2 {
+  font-size: 3rem;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+#canvas {
+  /* width: 80rem; */
+  /* height: 60rem; */
+  background-color: #f0f0f0;
+  margin-top: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+  perspective: 1000px;
+}
