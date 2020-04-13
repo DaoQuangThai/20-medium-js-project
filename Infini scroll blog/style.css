@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #296ca8;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 30px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#input {
+  padding: 12px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.posts__container {
+  position: relative;
+}
+
+.post {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #4992d3;
+  border-radius: 5px;
+  perspective: 1000px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.post__count {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #296ca8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.post__title {
+  margin-bottom: 20px;
+}
+.post__text {
+}
+
+.loading {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
+}
+
+.loading.show {
+  opacity: 1;
+}
+
+.loading div {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  margin-left: 20px;
+  border-radius: 50%;
+  animation: bounce 0.5s ease-in infinite;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading div:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 500px;
+    margin: 30px auto;
+  }
+}
