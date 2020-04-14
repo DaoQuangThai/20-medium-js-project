@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  background: linear-gradient(rgba(34, 73, 65, 0.3), rgba(34, 73, 65, 0.3)),
+    url('./img/bg-univers-3.jpg') no-repeat center center/cover;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  /* background-color: #fff; */
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  transform: scale(1);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+#text {
+  font-size: 2rem;
+}
+
+.circle {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #010f1c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  width: 32rem;
+  height: 32rem;
+  background: conic-gradient(
+    #55b7a4 0%,
+    #4ca493 40%,
+    #fff 40%,
+    #fff 60%,
+    #336d62 60%,
+    #2a5b52 100%
+  );
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  z-index: -2;
+  border-radius: 50%;
+  box-shadow: 0 0 3rem 1rem rgba(255, 255, 255, 0.5);
+}
+
+.pointer {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -4rem;
+  left: 14rem;
+  /* chỗ này phiêu quá ^_^ */
+  height: 190px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
