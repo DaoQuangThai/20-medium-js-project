@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blank</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./base-setup.css" />
+    <link rel="stylesheet" href="./utilities.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="settings" class="settings">
+      <span>Difficulty</span>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+    <div class="game-container">
+      <div class="while-playing">
+        <h1 class="mbt-small">Speed Typer</h1>
+        <div class="time-and-score">
+          <span class="time" id="time"></span>
+          <span class="score" id="score">Score: 0</span>
+        </div>
+
+        <div class="render-word">
+          Type the following:
+          <p class="mbt-small" id="word-given">sex</p>
+        </div>
+
+        <input
+          class="input"
+          type="text"
+          id="input"
+          placeholder="Faster and faster"
+        />
+      </div>
+
+      <div class="time-ranout" id="time-ranout">
+        <h2>Time ran out</h2>
+        <div id="final-score"></div>
+        <button class="btn" id="reload" onclick="location.reload()">
+          Reload
+        </button>
+      </div>
+    </div>
+
+    <button id="settings-btn" class="btn settings-btn">
+      <i class="fas fa-cog"></i>
+    </button>
+    <script src="./main.js"></script>
+  </body>
+</html>

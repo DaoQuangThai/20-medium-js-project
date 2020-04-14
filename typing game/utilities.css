@@ -1,0 +1,33 @@
+/* Margin */
+.mbt-small {
+  margin-bottom: 1rem;
+}
+.mbt-medium {
+  margin-bottom: 3rem;
+}
+.mbt-large {
+  margin-bottom: 5rem;
+}
+.mbt-largest {
+  margin-bottom: 8rem;
+}
+
+/* Components */
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.input {
+  border-radius: 5px;
+  border: 0;
+}
+
+.input:focus {
+  outline: none;
+}
