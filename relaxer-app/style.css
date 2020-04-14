@@ -114,3 +114,20 @@ h1 {
     transform: scale(1);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  .gradient-circle {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .pointer-container {
+    height: 18rem;
+    left: 13rem;
+  }
+}
