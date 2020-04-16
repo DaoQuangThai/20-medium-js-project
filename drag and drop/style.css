@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 3rem 0;
+}
+
+.draggable-list {
+  box-shadow: 5px 10px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.person {
+  display: flex;
+  border: 1px solid #bbb;
+  border-top: 0;
+  /* transition: transform 0.2s; */
+}
+
+.person.over {
+  background-color: #eee;
+  /* transform: scale(1.05); */
+}
+
+.person.wrong {
+  color: red;
+}
+.person.right {
+  color: green;
+}
+
+.person .position {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ccc;
+  border-right: 1px solid #bbb;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.person-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  flex: 1;
+}
+
+.person-info .icon {
+  padding-left: 2rem;
+}
+
+.check-btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #ccc;
+}
+
+.icon {
+  position: relative;
+  height: 2px;
+  width: 20px;
+  background-color: #555;
+  display: block;
+  transform: translateY(5px);
+  margin-left: 20px;
+}
+.icon:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: #555;
+  display: block;
+  left: 0;
+  top: -5px;
+}
